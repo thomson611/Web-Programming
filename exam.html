@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+  <html>
+   <head>
+    <title>Online Examination </title>
+   </head>
+   <body>
+     <h1>Online Examination</h1>
+     <form id = "exam">
+     <h3>1.What is the full form of HTML ?</h3>
+       <input type = "radio" name="q1" value="a">
+       HyperText Markup Language
+       <br>
+       <input type = "radio" name="q1" value="b">
+       High Text Machine Language
+       <br>
+       <input type= "radio" name="q1" value="c">
+       Hyper Text Machine Language
+       <br>
+    <h3>2.Which language is used for styling webpages ?</h3>
+      <input type ="radio" name="q2" value ="a">
+       HTML
+       <br>
+      <input type="radio" name="q2" value="b">
+       CSS
+       <br>
+      <input type="radio" name="q2" value="c">
+       JAVA
+       <br>
+    <h3>3.Which language is used for web page interaction ?</h3>
+      <input type ="radio" name="q3" value="a">
+      JavaScript
+       <br>
+      <input type = "radio" name="q3" value="b">
+      HTML
+      <br>
+      <input type = "radio" name ="q3" value="c">
+      PHP
+      <br>
+    <input type ="button" value="Submit Exam" onclick="checkAnswers()">
+    </form>
+    <h2 id="result"></h2>
+     <script>
+       function checkAnswers()
+        {
+         let score = 0;
+         let q1 = document.querySelector('input[name="q1"]:checked');
+         let q2 = document.querySelector('input[name="q2"]:checked');
+         let q3 = document.querySelector('input[name="q3"]:checked');
+          if(q1&&q1.value=="a")
+           {
+           score++;
+           }
+         if(q2&&q2.value=="b")
+          {
+           score++;
+          }
+         if(q3&&q3.value=="c")
+          {
+          score++;
+          }
+        document.getElementById("result").innerHTML = "Your score is:" +score+ "/3";
+      }
+     </script>
+    </body>
+   </html>
+       

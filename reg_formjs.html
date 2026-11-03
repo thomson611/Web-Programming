@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+   <title>Registration Form </title>
+  </head>
+  <body>
+   <h2> Registration Form </h2>
+    <form onsubmit="return validateForm()">
+     Name:
+      <input type="text" id="name">
+      <br><br>
+     Email:
+      <input type="text"id="email">
+      <br><br>
+     Password:
+      <input type="password"id="password">
+      <br><br>
+     Age:
+      <input type="number"id="age">
+      <br><br>
+     Gender:
+      <input type="radio"name="gender"value="male">
+      male
+      <input type="radio"name="gender"value="female">
+      female
+      <br><br>
+     Course:
+      <select id="course">
+       <option value="">Select Course</option>
+       <option value="BCA">BCA</option>
+       <option value="BBA">BBA</option>
+       <option value="Bcom">Bcom</option>
+       <option value="MCA">MCA</option>
+       </select>
+       <br><br>
+       <input type="checkbox"id="terms">I agree to terms and conditions
+       <br><br>
+       <input type="submit"value="Register">
+     </form>
+     <script>
+      function validateForm()
+       {
+       let name = document.getElementById("name").value;
+       let email = document.getElementById("email").value;
+       let password = document.getElementById("password").value;
+       let age = document.getElementById("age").value;
+       let course = document.getElementById("course").value;
+       let terms = document.getElementById("terms").checked;
+       
+       if(name=="")
+        {
+        alert("please enter your name");
+        return false;
+        }
+       if(email=="")
+        {
+         alert("Please enter your email");
+         return false;
+        }
+       if(!email.includes("@"))
+        {
+        alert("Please enter a valid email");
+        return false;
+        }
+       if(password.length<6)
+        {
+        alert("Password must contain atleast 6 characters");
+        return false;
+        }
+       if(age=="")
+        {
+        alert("Please enter your age");
+        return false;
+        }
+       if(age<18)
+        {
+        alert("Age must be 18 or above");
+        return false;
+        }
+       if(course=="")
+        {
+        alert("Please select a course");
+        return false;
+        }
+       if(!terms)
+        {
+        alert("Please accept the terms and conditions");
+        return false;
+        }
+        alert("Registration successfull");
+        return true;
+        }
+       </script>
+      </body>
+     </html>    
+   

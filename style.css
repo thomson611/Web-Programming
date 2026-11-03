@@ -1,0 +1,9 @@
+box{
+ background-color:yellow;
+ color:black;
+ border:2px solid black;
+ padding:20px;
+ margin:20px;
+ text-align:center;
+ font-size:20px;
+ }
